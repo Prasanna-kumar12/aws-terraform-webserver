@@ -49,6 +49,24 @@ resource "aws_instance" "web" {
   }
 }
 
+# Adding cloudwatch resource.
+
+resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
+  alarm_name          = "high-cpu-utilization"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 2
+  metric_name         = "CPUUtilization"
+  namespace          = "AWS/EC2"
+  period             = 120
+  statistic          = "Average"
+  threshold          = 70
+  alarm_description  = "This alarm monitors EC2 CPU utilization"
+  actions_enabled    = false
+  dimensions = {
+    InstanceId = aws_instance.web.id
+  }
+}
+
 output "public_ip" {
   value = aws_instance.web.public_ip
 }
