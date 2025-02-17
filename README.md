@@ -15,10 +15,11 @@ Made for Relx Practice Assessment
     aws configure
     
  You'll need to enter:
-  AWS Access Key
-  AWS Secret Key
-  Default AWS Region (e.g., us-east-1)
-  Output Format (choose json)
+ 
+    AWS Access Key
+    AWS Secret Key
+    Default AWS Region (e.g., us-east-1)
+    Output Format (choose json)
 
 ## Steps to Deploy
 1. Clone this repository:
@@ -52,7 +53,6 @@ Made for Relx Practice Assessment
 
      terraform destroy -auto-approve
 
-## **Step 8: Cleanup**
 To remove all resources:
 ```sh
 terraform destroy -auto-approve
