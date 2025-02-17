@@ -9,6 +9,17 @@ Made for Relx Practice Assessment
 - Terraform installed
 - AWS CLI configured
 
+ **Authenticate AWS CLI**
+   Run the following command and enter your AWS credentials:
+   
+    aws configure
+    
+ You'll need to enter:
+  AWS Access Key
+  AWS Secret Key
+  Default AWS Region (e.g., us-east-1)
+  Output Format (choose json)
+
 ## Steps to Deploy
 1. Clone this repository:
    ```sh
@@ -23,11 +34,10 @@ Made for Relx Practice Assessment
 3.Get the public IP and access the web server:
 
     terraform output instance_public_ip
-     Open http://<PUBLIC_IP> in a browser.
+   Open http://<PUBLIC_IP> in a browser.
 
 4.Monitoring
-  
-    CloudWatch tracks CPU usage.
+   CloudWatch tracks CPU usage.
 
 5.CI/CD Pipeline
 
