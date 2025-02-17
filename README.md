@@ -14,28 +14,29 @@ Made for Relx Practice Assessment
    ```sh
    git clone https://github.com/YOUR_GITHUB_USERNAME/aws-terraform-webserver.git
    cd aws-terraform-webserver
-Initialize and apply Terraform:
+   
+2.Initialize and apply Terraform:
 
   terraform init
   terraform apply -auto-approve
 
-Get the public IP and access the web server:
+3.Get the public IP and access the web server:
 
   terraform output instance_public_ip
   Open http://<PUBLIC_IP> in a browser.
 
-Monitoring
+4.Monitoring
   
-CloudWatch tracks CPU usage.
+  CloudWatch tracks CPU usage.
 
-CI/CD Pipeline
+5.CI/CD Pipeline
 
-GitHub Actions validates Terraform on every push.
+  GitHub Actions validates Terraform on every push.
 
-Cleanup
-To destroy resources:
+6.Cleanup
+  To destroy resources:
 
-terraform destroy -auto-approve
+  terraform destroy -auto-approve
 
 
 ---
