@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"  # Change this if needed
+  region = "eu-west-1"  # Change this if needed
 }
 
 # Security Group - Allows HTTP (80) and SSH (22)
